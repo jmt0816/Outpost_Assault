@@ -1,0 +1,106 @@
+[gd_scene load_steps=22 format=3 uid="uid://mjvenvtlrnj8"]
+
+[ext_resource type="PackedScene" uid="uid://crfsrjwcwdsr0" path="res://entities/enemies/enemy.tscn" id="1_m8rr7"]
+[ext_resource type="Texture2D" uid="uid://olgv103i1tnj" path="res://assets/enemies/infantry/tier1/die_00.png" id="2_6fbhd"]
+[ext_resource type="Script" path="res://entities/enemies/infantry/infantry_t1.gd" id="2_7veb4"]
+[ext_resource type="Texture2D" uid="uid://c72iuaufij1qt" path="res://assets/enemies/infantry/tier1/die_01.png" id="3_gt3fk"]
+[ext_resource type="Texture2D" uid="uid://b50vniq0m7ybd" path="res://assets/enemies/infantry/tier1/die_02.png" id="4_ndeht"]
+[ext_resource type="Texture2D" uid="uid://dnw0fxtfdx03p" path="res://assets/enemies/infantry/tier1/die_03.png" id="5_gcjk7"]
+[ext_resource type="Texture2D" uid="uid://bq4w0rm08uvuj" path="res://assets/enemies/infantry/tier1/die_04.png" id="6_g2qpi"]
+[ext_resource type="Texture2D" uid="uid://0gqfxpo4y6ll" path="res://assets/enemies/infantry/tier1/die_05.png" id="7_gm8e1"]
+[ext_resource type="Texture2D" uid="uid://5fkctfuvra1v" path="res://assets/enemies/infantry/tier1/die_06.png" id="8_3nylk"]
+[ext_resource type="Texture2D" uid="uid://b8ry542q7bxix" path="res://assets/enemies/infantry/tier1/idle_00.png" id="9_kibm1"]
+[ext_resource type="Texture2D" uid="uid://dcw6cuy07jdf6" path="res://assets/enemies/infantry/tier1/move_00.png" id="10_xmrpi"]
+[ext_resource type="Texture2D" uid="uid://jjs1n5xmk6oy" path="res://assets/enemies/infantry/tier1/move_01.png" id="11_12sja"]
+[ext_resource type="Texture2D" uid="uid://3lfcvryscllr" path="res://assets/enemies/infantry/tier1/move_02.png" id="12_0b46g"]
+[ext_resource type="Texture2D" uid="uid://c4vd51k87xpnk" path="res://assets/enemies/infantry/tier1/move_03.png" id="13_pt6os"]
+[ext_resource type="Texture2D" uid="uid://2w1gmgn42hee" path="res://assets/enemies/infantry/tier1/move_04.png" id="14_4ea1p"]
+[ext_resource type="Texture2D" uid="uid://boewwut3ieqcu" path="res://assets/enemies/infantry/tier1/move_05.png" id="15_64nje"]
+[ext_resource type="Texture2D" uid="uid://07xq3d03dsi0" path="res://assets/enemies/infantry/tier1/move_06.png" id="16_8iqwn"]
+[ext_resource type="Texture2D" uid="uid://bj3h4pbor4453" path="res://assets/enemies/infantry/tier1/move_07.png" id="17_k1w31"]
+[ext_resource type="AudioStream" uid="uid://brewxda4ak3ut" path="res://assets/sounds/infantry.wav" id="18_sdafd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_snap3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6fbhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gt3fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ndeht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gcjk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g2qpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gm8e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3nylk")
+}],
+"loop": false,
+"name": &"die",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_kibm1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_xmrpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_12sja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0b46g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pt6os")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4ea1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_64nje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8iqwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_k1w31")
+}],
+"loop": true,
+"name": &"move",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5syuo"]
+radius = 27.0185
+
+[node name="InfantryT1" instance=ExtResource("1_m8rr7")]
+collision_mask = 7
+script = ExtResource("2_7veb4")
+objective_damage = 10
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_snap3")
+animation = &"move"
+autoplay = "move"
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_5syuo")
+
+[node name="DefaultSound" parent="." index="2"]
+stream = ExtResource("18_sdafd")

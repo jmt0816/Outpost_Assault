@@ -1,0 +1,197 @@
+[gd_scene load_steps=35 format=3 uid="uid://p8jaw2k447wo"]
+
+[ext_resource type="Script" path="res://entities/shooter.gd" id="1_byr6n"]
+[ext_resource type="Texture2D" uid="uid://gbgnomi33oqm" path="res://assets/towers/gatling/tier1/gun_die_00.png" id="2_b2k3m"]
+[ext_resource type="Texture2D" uid="uid://bwttwxw00lmpe" path="res://assets/towers/gatling/tier1/gun_die_01.png" id="3_ygd38"]
+[ext_resource type="Texture2D" uid="uid://yckuisdh6mkv" path="res://assets/towers/gatling/tier1/gun_die_02.png" id="4_nencd"]
+[ext_resource type="Texture2D" uid="uid://dmbl3xbd06eud" path="res://assets/towers/gatling/tier1/gun_die_03.png" id="5_nnkjn"]
+[ext_resource type="Texture2D" uid="uid://cscampoidcpqf" path="res://assets/towers/gatling/tier1/gun_die_04.png" id="6_bsl1d"]
+[ext_resource type="Texture2D" uid="uid://cc1fuki0vjje0" path="res://assets/towers/gatling/tier1/gun_die_05.png" id="7_s4qp2"]
+[ext_resource type="Texture2D" uid="uid://7ryw4fx7moo" path="res://assets/towers/gatling/tier1/gun_die_06.png" id="8_0o5j6"]
+[ext_resource type="Texture2D" uid="uid://ta5ln5pjsf5h" path="res://assets/towers/gatling/tier1/gun_die_07.png" id="9_584p8"]
+[ext_resource type="Texture2D" uid="uid://bm28x2svpl5ve" path="res://assets/towers/gatling/tier1/gun_die_08.png" id="10_5uqhf"]
+[ext_resource type="Texture2D" uid="uid://cws6rl3lnhm0k" path="res://assets/towers/gatling/tier1/gun_die_09.png" id="11_8fhbj"]
+[ext_resource type="Texture2D" uid="uid://bn3gghgyl2hv4" path="res://assets/towers/gatling/tier1/gun_die_10.png" id="12_2g7ip"]
+[ext_resource type="Texture2D" uid="uid://cwbbnwad2e8ra" path="res://assets/towers/gatling/tier1/gun_die_11.png" id="13_fe7v8"]
+[ext_resource type="Texture2D" uid="uid://clsvukajlpluq" path="res://assets/towers/gatling/tier1/gun_die_12.png" id="14_4ehji"]
+[ext_resource type="Texture2D" uid="uid://cbq24dv11g3yw" path="res://assets/towers/gatling/tier1/gun_die_13.png" id="15_ushoj"]
+[ext_resource type="Texture2D" uid="uid://74w6n6vnjk2a" path="res://assets/towers/gatling/tier1/gun_die_14.png" id="16_ujnok"]
+[ext_resource type="Texture2D" uid="uid://bw05k1v7uxfox" path="res://assets/towers/gatling/tier1/gun_die_15.png" id="17_nxxis"]
+[ext_resource type="Texture2D" uid="uid://433dkv0votpy" path="res://assets/towers/gatling/tier1/gun_die_16.png" id="18_5qa0h"]
+[ext_resource type="Texture2D" uid="uid://bstykguetlpc5" path="res://assets/towers/gatling/tier1/gun_die_17.png" id="19_ng13x"]
+[ext_resource type="Texture2D" uid="uid://bpb2xc35xhdep" path="res://assets/towers/gatling/tier1/gun_die_18.png" id="20_uksas"]
+[ext_resource type="Texture2D" uid="uid://dwwbssgt04kqk" path="res://assets/towers/gatling/tier1/gun_die_19.png" id="21_mjmgs"]
+[ext_resource type="Texture2D" uid="uid://m6rdxm327u6q" path="res://assets/towers/gatling/tier1/gun_die_20.png" id="22_k24h8"]
+[ext_resource type="Texture2D" uid="uid://dfo1g1r7xmj3s" path="res://assets/towers/gatling/tier1/gun_die_21.png" id="23_0hejw"]
+[ext_resource type="Texture2D" uid="uid://nnbk2n8hm6cx" path="res://assets/towers/gatling/tier1/gun_die_22.png" id="24_s4pau"]
+[ext_resource type="Texture2D" uid="uid://bwhfvpyf5nxse" path="res://assets/towers/gatling/tier1/gun_idle_00.png" id="25_jj1mx"]
+[ext_resource type="Texture2D" uid="uid://bwwu4o84p432s" path="res://assets/towers/gatling/tier1/gun_shoot_00.png" id="26_pfyqg"]
+[ext_resource type="Texture2D" uid="uid://c5vs4dspyuqxq" path="res://assets/towers/gatling/tier1/gun_shoot_01.png" id="27_1buqa"]
+[ext_resource type="Texture2D" uid="uid://dh2ds82bksnpo" path="res://assets/towers/gatling/tier1/gun_shoot_02.png" id="28_1wug2"]
+[ext_resource type="Texture2D" uid="uid://bm6jdv3exh7qr" path="res://assets/towers/gatling/tier1/gun_shoot_03.png" id="29_mbvp0"]
+[ext_resource type="Texture2D" uid="uid://bn5xotdcl5b4" path="res://assets/towers/gatling/tier1/gun_fx_00.png" id="30_2u4rf"]
+[ext_resource type="Texture2D" uid="uid://cs0d53fjip02l" path="res://assets/towers/gatling/tier1/gun_fx_01.png" id="31_7bpi3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgbts"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b2k3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ygd38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nencd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nnkjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bsl1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s4qp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0o5j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_584p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5uqhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8fhbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2g7ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fe7v8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4ehji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ushoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ujnok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nxxis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5qa0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ng13x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_uksas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_mjmgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_k24h8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0hejw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_s4pau")
+}],
+"loop": true,
+"name": &"die",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_jj1mx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_pfyqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1buqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_1wug2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_mbvp0")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2m6kt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_2u4rf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7bpi3")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ryrg"]
+radius = 700.0
+
+[node name="Shooter" type="Node2D"]
+script = ExtResource("1_byr6n")
+
+[node name="Gun" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qgbts")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Muzzle" type="Marker2D" parent="Gun"]
+position = Vector2(62, 19)
+
+[node name="MuzzleFlash" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2m6kt")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Detector" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+shape = SubResource("CircleShape2D_4ryrg")
+
+[node name="LookAhead" type="RayCast2D" parent="."]
+target_position = Vector2(750, 0)
+collide_with_areas = true
+
+[node name="FireRateTimer" type="Timer" parent="."]
+
+[connection signal="animation_finished" from="Gun" to="." method="_on_gun_animation_finished"]
+[connection signal="area_entered" from="Detector" to="." method="_on_detector_area_entered"]
+[connection signal="area_exited" from="Detector" to="." method="_on_detector_area_exited"]
+[connection signal="body_entered" from="Detector" to="." method="_on_detector_body_entered"]
+[connection signal="body_exited" from="Detector" to="." method="_on_detector_body_exited"]
+[connection signal="timeout" from="FireRateTimer" to="." method="_on_fire_rate_timer_timeout"]
